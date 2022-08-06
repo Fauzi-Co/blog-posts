@@ -15,6 +15,9 @@
       </li>
     </ul>
 
+    {{-- parameter pertama nama gate yang boleh mengakses --}}
+    @can('admin')
+        
     <h6 class="sidebar-haeding d-flex justify-content align-item-center px-3 mt-4 mb-1 text-secondary">
       <span>Administrator</span>
     </h6>
@@ -26,5 +29,8 @@
         </a>
       </li>
     </ul>
+
+    @endcan
+    
   </div>
 </nav>

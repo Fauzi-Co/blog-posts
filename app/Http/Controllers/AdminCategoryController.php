@@ -14,12 +14,6 @@ class AdminCategoryController extends Controller
      */
     public function index()
     {
-        // Jika belum login
-        if (!auth()->check() || auth()->user()->username != "fauzi-co") {
-            // Pesan Forbidden di Browser
-            abort(403);
-        }
-
         return view('dashboard.categories.index', [
             "categories" => Category::all(),
         ]);

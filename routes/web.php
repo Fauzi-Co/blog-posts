@@ -74,4 +74,4 @@ Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'check
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
 // Dashboard untuk admin mengubah category
-Route::resource('/dashboard/categories/', AdminCategoryController::class)->except('show')->middleware('auth');
+Route::resource('/dashboard/categories/', AdminCategoryController::class)->except('show');

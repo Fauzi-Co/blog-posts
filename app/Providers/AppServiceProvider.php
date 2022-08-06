@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
 
         // mendefisikan gate dengan nama admin, dan ini hanyar bisa di akses oleh username fauzi-co
         Gate::define('admin', function (User $user) {
-            return $user->username == "fauzi-co";
+            return $user->is_admin == 1;
         });
     }
 }

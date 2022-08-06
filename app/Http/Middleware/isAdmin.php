@@ -17,7 +17,7 @@ class isAdmin
     public function handle(Request $request, Closure $next)
     {
         // Jika belum login / bukan admin
-        if (!auth()->check() || auth()->user()->username != "fauzi-co") {
+        if (!auth()->check() || !auth()->user()->is_admin) {
             // Pesan Forbidden di Browser
             abort(403);
         }
